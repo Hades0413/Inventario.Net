@@ -56,6 +56,13 @@ namespace ProyectoTest.Controllers
         [HttpPost]
         public ActionResult Registrarse(string NNombres, string NApellidos, string NCorreo, string NContrasena, string NConfirmarContrasena)
         {
+            if (UsuarioLogica.Instancia.CorreoExiste(NCorreo))
+            {
+                ViewBag.Error = "El correo electrónico ya está en uso";
+                return View();
+            }
+
+
             Usuario oUsuario = new Usuario()
             {
                 Nombres = NNombres,
@@ -71,18 +78,17 @@ namespace ProyectoTest.Controllers
                 ViewBag.Error = "Las contraseñas no coinciden";
                 return View(oUsuario);
             }
-            else {
-                
-
+            else
+            {
                 int idusuario_respuesta = UsuarioLogica.Instancia.Registrar(oUsuario);
 
                 if (idusuario_respuesta == 0)
                 {
                     ViewBag.Error = "Error al registrar";
                     return View();
-
                 }
-                else {
+                else
+                {
                     return RedirectToAction("Index", "Login");
                 }
             }

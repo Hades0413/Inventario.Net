@@ -29,7 +29,6 @@ namespace ProyectoTest.Logica
         }
 
 
-
         public List<Departamento> ObtenerDepartamento() {
             List<Departamento> lst = new List<Departamento>();
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))

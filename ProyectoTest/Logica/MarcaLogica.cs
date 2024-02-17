@@ -143,7 +143,6 @@ namespace ProyectoTest.Logica
                     cmd.ExecuteNonQuery();
 
                     respuesta = true;
-
                 }
                 catch (Exception ex)
                 {

@@ -192,5 +192,5 @@ namespace ProyectoTest.Controllers
 
         public bool resultado { get; set; }
         public string mensaje { get; set; }
-    }
+    } 
 }

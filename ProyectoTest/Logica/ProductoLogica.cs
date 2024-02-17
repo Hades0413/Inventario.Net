@@ -74,7 +74,6 @@ namespace ProyectoTest.Logica
         }
 
 
-
         public int Registrar(Producto oProducto)
         {
             int respuesta = 0;

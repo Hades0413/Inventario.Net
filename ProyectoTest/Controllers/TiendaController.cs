@@ -79,10 +79,6 @@ namespace ProyectoTest.Controllers
         }
 
 
-
-
-
-
         [HttpPost]
         public JsonResult ListarProducto(int idcategoria = 0)
         {

@@ -177,18 +177,14 @@ SENSOR: Pixart 3335 óptico
 SWITCHES: Hasta 20 millones de clicks
 BOTONES PROGRAMABLES: 8.
 TIPO DE AGARRE: Palm, Claw, Fingertip.
-ORIENTACIÓN: Derecho.
 CABLE: Con cable mallado de 1.8 m.
 CONEXIÓN: Inalámbrica 2.4 Ghz con Dongle USB/ Cableado USB.
 MODELO SENSOR: Pixart PAW 3335 óptico.
-INTERRUPTORES: Huano, 20 millones de clicks.
-RETROILUMINACIÓN: Si, RGB Chroma.
 DPI MÍNIMO: 100.
 DPI MÁXIMO: 16000.
 FRECUENCIA DE RESPUESTA: 125 Hz / 1000 Hz.
 PESO: 96.5gr.
 DIMENSIONES: 12.7x6.6x4 cm.
-SISTEMA DE PESAS: No.
 SOFTWARE: Si.
 ',3,4,'130.00','10','~/Imagenes/Productos/57.jpg')
 

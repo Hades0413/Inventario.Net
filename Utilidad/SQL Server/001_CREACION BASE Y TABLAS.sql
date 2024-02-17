@@ -40,7 +40,7 @@ CREATE TABLE USUARIO(
 IdUsuario int primary key identity,
 Nombres varchar(100),
 Apellidos varchar(100),
-Correo varchar(100),
+Correo varchar(100) UNIQUE,
 Contrasena varchar(100),
 EsAdministrador bit,
 Activo bit default 1,
@@ -126,4 +126,7 @@ SELECT * FROM PROVINCIA
 go
 
 SELECT * FROM DISTRITO
+go
+
+SELECT * FROM PRODUCTO
 go

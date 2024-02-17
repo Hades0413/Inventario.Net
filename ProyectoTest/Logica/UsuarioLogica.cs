@@ -87,7 +87,6 @@ namespace ProyectoTest.Logica
                     oConexion.Open();
 
                     cmd.ExecuteNonQuery();
-
                     respuesta = Convert.ToInt32(cmd.Parameters["Resultado"].Value);
 
                 }
@@ -98,5 +97,33 @@ namespace ProyectoTest.Logica
             }
             return respuesta;
         }
+
+
+        //
+        public bool CorreoExiste(string correo)
+        {
+            bool existe = false;
+            using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Usuario WHERE Correo = @Correo", oConexion);
+                    cmd.Parameters.AddWithValue("@Correo", correo);
+
+                    oConexion.Open();
+
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    existe = count > 0;
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de excepciones
+                    existe = false;
+                }
+            }
+            return existe;
+        }
+
+
     }
 }

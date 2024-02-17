@@ -290,4 +290,7 @@ from compra c
 where c.IdUsuario = @IdUsuario
 FOR XML PATH('COMPRA'), ROOT('DATA') 
 end
+go
+
+
 

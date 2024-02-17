@@ -1,0 +1,290 @@
+﻿@model ProyectoTest.Models.Usuario
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic"
+          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Righteous:regular"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <title>Document</title>
+
+
+    <style>
+        :root {
+            /* Body Background Bg--- */
+            --background-color: #121212;
+            /* sm Background ---- Bg */
+            --form-bg: #202020;
+            --fb-bg: #4267b2;
+            --google-bg: #fff;
+            --ps-bg: #02b3e8;
+            --xbox-bg: #107c10;
+            --switch-bg: #e60012;
+            /* text color */
+            --h6-text: #f1f1f1;
+            --input-bg: #2b2b2b;
+            --input-text: #f4f4f4;
+            --focus-bg: #484848;
+            --options-color: #f4f4f480;
+            --checkbox-bg: #484848;
+            --link-color: #f4f4f480;
+            --privacy-color: #f1f1f1;
+            /* Button Color Bg */
+            --button-bg: #0074E4;
+            --button-actv: #037bee;
+            --button-color: #fff;
+            /* Iconos */
+            --facebook-color: #4267b2;
+            --google-color: #db4437;
+            --outlook-color: #0078d4;
+            --apple-color: #000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            background: var(--background-color);
+        }
+
+        .card {
+            margin: auto;
+            margin-top: 5%;
+            margin-bottom: 10%;
+            width: 450px;
+            padding: 40px 60px;
+            background: var(--form-bg);
+        }
+
+            .card .logo img {
+                margin-bottom: 10%;
+                width: 25%;
+                border-radius: 50%;
+            }
+
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+            .icons i {
+                margin: auto;
+                font-size: 24px;
+                width: 70px;
+                height: 52px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                color: var(--input-bg);
+                background: var(--input-text);
+                transition: background 0.3s, color 0.3s;
+                margin-bottom: 5%;
+            }
+
+                .icons i:hover {
+                    background: var(--focus-bg);
+                    color: #fff;
+                }
+
+        .card .logo {
+            text-align: center;
+        }
+
+        .card .title {
+            margin-top: 10px;
+        }
+
+        .title p {
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .input-container {
+            margin-top: 0px;
+        }
+
+            .input-container input {
+                width: 100%;
+                height: 54px;
+                background: var(--input-bg);
+                color: #fff;
+                outline: none;
+                border: none;
+                margin: 12px 0;
+                padding: 10px;
+            }
+
+                .input-container input:hover,
+                .input-container input:focus {
+                    background: var(--focus-bg);
+                }
+
+        .remember {
+            margin-top: 10px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .remember .input {
+                font-size: 14px;
+                text-transform: capitalize;
+                color: #f4f4f480;
+            }
+
+            .remember .forgot {
+                font-size: 14px;
+                color: #f4f4f480;
+            }
+
+        .loginBtn {
+            margin-top: 30px;
+        }
+
+            .loginBtn button {
+                width: 100%;
+                height: 54px;
+                background: var(--button-bg);
+                color: #f4f4f480;
+                outline: none;
+                border: none;
+                text-transform: uppercase;
+                font-family: 'Righteous';
+                cursor: pointer;
+            }
+
+
+                .loginBtn button:hover {
+                    background: var(--button-actv);
+                    color: var(--button-color);
+                }
+
+        .privacy {
+            margin-top: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .new {
+            color: #f4f4f480;
+            text-align: center;
+        }
+
+            .new .acc {
+                font-size: 14px;
+            }
+
+        .acc span {
+            color: #fff;
+        }
+
+        .p2 {
+            font-size: 14px;
+        }
+
+            .p2 a {
+                text-decoration: none;
+                color: #fff;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+
+    <form action="@Url.Action("Registrarse","Login")" method="post" class="card">
+        <div class="logo">
+            <img src="https://media.tenor.com/JUxKybRxyPAAAAAe/obito-uchiha-tobi.png"
+                 alt="" />
+        </div>
+        <div class="icons">
+            <i class="fab fa-facebook"
+               style="background: var(--facebook-color); color: #fff"></i>
+            <i class="fab fa-google-plus"
+               style="background: var(--google-color); color: #fff"></i>
+            <i class="far fa-envelope"
+               style="background: var(--outlook-color); color: #fff"></i>
+            <i class="fab fa-apple"
+               style="background: var(--apple-color); color: #fff"></i>
+        </div>
+
+        <div class="title">
+            <p>REGISTRARSE</p>
+        </div>
+
+        <div class="input-container">
+            <div class="inputBox">
+                <input type="text" id="inputFirstName" name="NNombres" placeholder="Nombres" value="@Html.DisplayTextFor(model => model.Nombres)" />
+            </div>
+            <div class="inputBox">
+                <input type="text" id="inputLastName" name="NApellidos" placeholder="Apellidos" value="@Html.DisplayTextFor(model => model.Apellidos)" />
+            </div>
+            <div class="inputBox">
+                <input type="text" id="inputEmail" name="NCorreo" placeholder="Correo" value="@Html.DisplayTextFor(model => model.Correo)" />
+            </div>
+            <div class="inputBox">
+                <input type="Password" id="inputPassword" name="NContrasena" placeholder="Contraseña" value="@Html.DisplayTextFor(model => model.Contrasena)" />
+            </div>
+            <div class="inputBox">
+                <input type="Password" id="inputPasswordConfirm" name="NConfirmarContrasena" placeholder="Confirma Contraseña" value="@Html.DisplayTextFor(model => model.ConfirmarContrasena)" />
+            </div>
+        </div>
+
+
+        <div class="loginBtn">
+            <button type="Submit">Iniciar</button>
+        </div>
+
+        <div class="privacy">
+            <p>Privacy</p>
+        </div>
+
+        <div class="new">
+            <p class="acc">
+                ¿Ya tienes una cuenta?
+                <a href="@Url.Action("Index","Login")"><span>Acceder</span></a>
+            </p>
+        </div>
+    </form>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @if (ViewBag.Error != null)
+    {
+        <script>
+Swal.fire({
+    title: "Oops!",
+    text: "@Html.Raw(ViewBag.Error)",
+    icon: "error"
+});
+        </script>
+    }
+</body>
+</html>
+

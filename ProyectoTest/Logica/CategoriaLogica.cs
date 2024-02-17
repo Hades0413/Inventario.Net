@@ -82,7 +82,6 @@ namespace ProyectoTest.Logica
                     cmd.ExecuteNonQuery();
 
                     respuesta = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
-
                 }
                 catch (Exception ex)
                 {
