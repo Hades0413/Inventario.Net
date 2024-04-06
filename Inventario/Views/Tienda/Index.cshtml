@@ -1,0 +1,786 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Tienda.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gaaaa</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://kit.fontawesome.com/4dd764bfea.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #111;
+        }
+
+        :root {
+            --yellow: #f9ca24;
+        }
+
+        /* custom scroll bar */
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #212529;
+        }
+
+        /* CARRUSEL */
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 530px;
+            overflow: hidden;
+        }
+
+        .carousel-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            /*transition: opacity 0.5s;*/
+        }
+
+            .carousel-item.active {
+                opacity: 1;
+            }
+
+            .carousel-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+        }
+
+            .carousel-caption h5 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 20px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .carousel-control-prev {
+            left: 10px;
+        }
+
+        .carousel-control-next {
+            right: 10px;
+        }
+
+        .bcar {
+            background: var(--yellow);
+            border: #f9ca24 2px solid;
+            cursor: pointer;
+        }
+
+            .bcar:hover {
+                background-color: #000;
+            }
+
+        .col-12 {
+            width: 100%;
+            margin: 0;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        #carouselExampleCaptions {
+            width: 100%;
+            margin: 0;
+        }
+        /* CARRUSEL */
+        /* FOOTER */
+        .contenedor-footer {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .fila {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+            margin-left: -30px;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #24262b;
+            padding: 70px 0;
+        }
+
+        .columnas {
+            width: 20%;
+            padding: 0 15px;
+            margin: 1.5%;
+        }
+
+            .columnas h4 {
+                font-size: 18px;
+                color: #ffffff;
+                text-transform: capitalize;
+                margin-bottom: 35px;
+                font-weight: 500;
+                position: relative;
+            }
+
+                .columnas h4::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -10px;
+                    background-color: cyan;
+                    height: 2px;
+                    box-sizing: border-box;
+                    width: 50px;
+                }
+
+            .columnas ul li:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            .columnas ul li a {
+                font-size: 16px;
+                text-transform: capitalize;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 300;
+                color: #bbbbbb;
+                display: block;
+                transition: all 0.3s ease;
+            }
+
+                .columnas ul li a:hover {
+                    color: #ffffff;
+                    padding-left: 8px;
+                }
+
+            .columnas .redes a {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background-color: rgba(255, 255, 255, 0.2);
+                margin: 0 10px 10px 0;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 50%;
+                color: #ffffff;
+                transition: all 0.5s ease;
+            }
+
+                .columnas .redes a:hover {
+                    color: #24262b;
+                    background-color: #ffffff;
+                }
+
+
+        /* FOOTER */
+
+        /* wsp */
+
+        .whatsapp-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 9999;
+        }
+
+            .whatsapp-button a {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                background-color: #25D366;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 50%;
+                font-size: 24px;
+                transition: background-color 0.3s ease;
+                overflow: hidden;
+            }
+
+                .whatsapp-button a:hover {
+                    background-color: #128C7E;
+                }
+
+                .whatsapp-button a #close-icon {
+                    display: none;
+                }
+
+            .whatsapp-button .box {
+                position: absolute;
+                top: -250px;
+                /* 320 */
+                right: 0;
+                width: 320px;
+                /*padding: 20px;*/
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease;
+            }
+
+            .whatsapp-button .box-header {
+                display: flex;
+                align-items: center;
+                background-color: #25D366;
+                color: #fff;
+                padding: 10px;
+                border-radius: 5px 5px 0 0;
+            }
+
+                .whatsapp-button .box-header svg {
+                    font-size: 50px;
+                    margin: 10px;
+                }
+
+                .whatsapp-button .box-header h4 {
+                    margin: 0;
+                    font-size: 14pt;
+                    flex-grow: 1;
+                }
+
+                .whatsapp-button .box-header p {
+                    margin: 0;
+                    font-size: 12px;
+                    flex-grow: 1;
+                }
+
+            .whatsapp-button .box-content {
+                padding: 10px;
+                color: #333;
+                background: #f5f7f9;
+                margin: 5%;
+                border-radius: 5px;
+            }
+
+                .whatsapp-button .box-content h4 {
+                    margin-top: 0;
+                    font-size: 18px;
+                }
+
+                .whatsapp-button .box-content p {
+                    font-size: 9pt;
+                }
+
+                .whatsapp-button .box-content .whatsapp-contact {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                }
+
+                    .whatsapp-button .box-content .whatsapp-contact svg {
+                        font-size: 44px;
+                        color: #25D366;
+                        margin-right: 10px;
+                    }
+
+                .whatsapp-button .box-content .whatsapp-info {
+                    flex-grow: 1;
+                }
+
+                .whatsapp-button .box-content .whatsapp-contact #ico2 {
+                    font-size: 24px;
+                    color: #25D366;
+                    margin-right: 10px;
+                }
+
+
+
+
+                .whatsapp-button .box-content a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 40px;
+                    padding: 0 20px;
+                    background-color: #25D366;
+                    color: #fff;
+                    text-decoration: none;
+                    border-radius: 20px;
+                    font-weight: bold;
+                    transition: background-color 0.3s ease;
+                }
+
+                    .whatsapp-button .box-content a:hover {
+                        background-color: #128C7E;
+                    }
+
+                .whatsapp-button .box-content i {
+                    margin-right: 10px;
+                }
+
+            .whatsapp-button .log {
+                text-align: center;
+            }
+
+                .whatsapp-button .log img {
+                    width: 10%;
+                    cursor: pointer;
+                    margin-bottom: 5px;
+                }
+
+        /* wsp */
+
+        /* MODAL */
+        .modal-content {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .btn-outline-primary {
+            border: none;
+            background: #333;
+            color: #fff;
+        }
+
+            .btn-outline-primary:hover {
+                border-color: #000;
+                background: rgb(2, 145, 2);
+            }
+        /*dropdown-menu*/
+        .dropdown-menu {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .dropdown-item {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+            .dropdown-item:hover {
+                background: #000;
+                color: #fff;
+            }
+        /* H5 */
+        .fw-bolder {
+            color: #fff;
+        }
+
+        .text-center {
+            color: #fff;
+        }
+        /* DETALLE */
+        .btn-detalle {
+            background: #333;
+            color: #fff;
+        }
+        /* AGREGAR */
+        .btn-agregar-carrito {
+            margin-top: 10px;
+            background: #333;
+            color: #fff;
+        }
+            .btn-detalle:hover, .btn-agregar-carrito:hover {
+                background: rgb(2, 145, 2);
+            }
+            /* CARD */
+            .card {
+                background: #1a1a1a;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="row mt-5">
+
+        <!-- Carrusel -->
+        <div class="col-12">
+            <!-- Utiliza la clase col-12 para que el carrusel ocupe todo el ancho -->
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://estaticos-cdn.prensaiberica.es/clip/392fc587-3e37-4f5c-b3ae-71315087512c_alta-libre-aspect-ratio_default_0.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Recuerda</h5>
+                            <p>Por cada taza de arroz dos de Agua.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://mbpschool.com/wp-content/uploads/2023/10/shutterstock_2252991631-scaled.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Recuerda</h5>
+                            <p>Por cada taza de arroz dos de Agua.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.lavanguardia.com/files/article_main_microformat/files/fp/uploads/2021/01/07/5ff70b0b1b308.r_d.566-192-0.jpeg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Recuerda</h5>
+                            <p>Por cada taza de arroz dos de Agua.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- Fin del carrusel -->
+
+
+
+        <div class="py-2">
+            <div class="container px-2 px-lg-2 mt-5">
+                <div id="catalogo-productos" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="contenedor-footer">
+                <div class="fila">
+                    <div class="columnas">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">Conócenos</a></li>
+                            <li><a href="#">Consultas</a></li>
+                            <li><a href="#">Contáctanos</a></li>
+                        </ul>
+                    </div>
+                    <div class="columnas">
+                        <h4>FAQ</h4>
+                        <ul>
+                            <li><a href="#">¿Quiénes somos?</a></li>
+                            <li><a href="#">¿Cómo nos comunican?</a></li>
+                            <li><a href="#">¿Dónde nos encuentran?</a></li>
+                            <li><a href="#">Método de pago</a></li>
+                        </ul>
+                    </div>
+                    <div class="columnas">
+                        <h4>online shop</h4>
+                        <ul>
+                            <li><a href="#">watch</a></li>
+                            <li><a href="#">bag</a></li>
+                            <li><a href="#">shoes</a></li>
+                            <li><a href="#">dress</a></li>
+                        </ul>
+                    </div>
+                    <div class="columnas">
+                        <h4>Síguenos</h4>
+                        <div class="redes">
+                            <a href="#"><i title="Facebook" class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i title="Twitter" class="fab fa-twitter"></i></a>
+                            <a href="#"><i title="Instagram" class="fab fa-instagram"></i></a>
+                            <a href="#"><i title="Git Hub" class="fab fa-github"></i></a>
+                            <a href="#"><i title="Youtube" class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER -->
+    </div>
+
+    <!-- WSP -->
+
+    <div class="whatsapp-button">
+        <a href="#" onclick="toggleButton(event)">
+            <i id="whatsapp-icon" class="fab fa-whatsapp"></i>
+            <i id="close-icon" class="fas fa-times"></i>
+        </a>
+        <div id="whatsapp-box" class="box">
+            <div class="box-header">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                    <h4>Comenzar Chat</h4>
+                    <p>¡Hola! Haga clic en uno de nuestros miembros a continuación para chatear en WhatsApp</p>
+                </div>
+            </div>
+            <div class="box-content" id="whatsapp-link">
+                <div class="whatsapp-contact">
+                    <i class="fab fa-whatsapp"></i>
+                    <div class="whatsapp-info">
+                        <h4>Contacto</h4>
+                        <p>Asistencia Técnica</p>
+                    </div>
+                    <i id="ico2" class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="log"><img src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/03b2e9ee829c5fb02a683aebca0ad447~c5_100x100.jpeg?lk3s=a5d48078&x-expires=1708549200&x-signature=h7Rz0kK0dZCVUYa%2BbPNBeDlN4Jk%3D" alt="logo" style="border-radius:50%;"></div>
+        </div>
+    </div>
+    <!-- WSP -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Seleccione una Categoría</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-categoria">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--pag-->
+
+    <script>
+        var currentSlide = 0;
+        var carouselItems = document.querySelectorAll('.carousel-item');
+
+        function changeSlide(n) {
+            carouselItems[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + n + carouselItems.length) % carouselItems.length;
+            carouselItems[currentSlide].classList.add('active');
+        }
+
+        /*
+        setInterval(function() {
+          changeSlide(1);
+        }, 5000);
+        */
+
+
+
+
+        /*CAJAS*/
+
+        function zoomIn(element) {
+            element.getElementsByClassName('imagen-fondo')[0].classList.add('zoomed');
+        }
+
+        function zoomOut(element) {
+            element.getElementsByClassName('imagen-fondo')[0].classList.remove('zoomed');
+        }
+
+        /*CAJAS*/
+
+
+
+        /* wsp*/
+
+        function toggleButton(event) {
+            event.preventDefault();
+
+            var closeButton = document.getElementById("close-icon");
+            var whatsappIcon = document.getElementById("whatsapp-icon");
+            var whatsappBox = document.getElementById("whatsapp-box");
+
+            if (closeButton.style.display === "block") {
+                closeButton.style.display = "none";
+                whatsappIcon.style.display = "block";
+                whatsappBox.style.opacity = 0;
+                whatsappBox.style.visibility = "hidden";
+            } else {
+                closeButton.style.display = "block";
+                whatsappIcon.style.display = "none";
+                whatsappBox.style.opacity = 1;
+                whatsappBox.style.visibility = "visible";
+            }
+        }
+        /* Enlace */
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtenemos la referencia a la div de box-content
+            var whatsappLink = document.getElementById("whatsapp-link");
+
+            // Agregamos un evento de clic a la div
+            whatsappLink.addEventListener("click", function () {
+                // Definimos el enlace de WhatsApp
+                var mensaje = encodeURIComponent("Deja de ser tan Homogremquin :v");
+                var whatsappURL = "https://api.whatsapp.com/send?phone=+51945273741&text=" + mensaje;
+                // Redireccionamos a la página de WhatsApp
+                window.open(whatsappURL, "_blank");
+            });
+        });
+
+
+
+
+    </script>
+    <!--pag-->
+
+    @section scripts{
+
+        <script>
+    $(".btn-ver-categoria").click(function () {
+        jQuery.ajax({
+            url: '@Url.Action("ListarCategoria", "Tienda")',
+            type: "GET",
+            data: null,
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                $(".row-categoria").html("");
+                $(".modal-body").LoadingOverlay("hide");
+                if (data.data != null) {
+                    $("<div>").addClass("col-4").append(
+                        $("<button>").addClass("btn btn-outline-primary btn-categoria m-1 w-100").text("Ver Todos").attr({ "onclick":"listarProductos(0)"})
+                    ).appendTo(".row-categoria")
+
+                    $.each(data.data, function (i, item) {
+                        $("<div>").addClass("col-4").append(
+                            $("<button>").addClass("btn btn-outline-primary btn-categoria m-1 w-100").text(item.Descripcion).attr({ "onclick": "listarProductos("+ item.IdCategoria +")" })
+                        ).appendTo(".row-categoria")
+                    });
+                }
+            },
+            error: function (error) {
+                console.log(error)
+            },
+            beforeSend: function () {
+                $(".modal-body").LoadingOverlay("show");
+            },
+        });
+
+        $('#exampleModal').modal('show');
+    });
+
+    $(document).ready(function () {
+        listarProductos(0);
+    })
+
+    $(document).on('click', '.btn-detalle', function (event) {
+        var json = $(this).data("elemento")
+        window.location.href = "@Url.Action("Producto", "Tienda")" + "?idproducto=" + json.IdProducto;
+    });
+
+    $(document).on('click', '.btn-categoria', function (event) {
+        $('#exampleModal').modal('hide');
+    });
+
+
+    function listarProductos(_idcategoria) {
+        jQuery.ajax({
+            url: '@Url.Action("ListarProducto", "Tienda")',
+            type: "POST",
+            data: JSON.stringify({ idcategoria: _idcategoria}),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                $("#catalogo-productos").html("");
+
+                $("#catalogo-productos").LoadingOverlay("hide");
+                if (data.data != null) {
+
+                    $.each(data.data, function (i, item) {
+                        //catalogo-productos
+                        $("<div>").addClass("col mb-5").append(
+                            $("<div>").addClass("card h-100").append(
+                                $("<img>").addClass("card-img-top").attr({ "src": "data:image/" + item.extension + ";base64," + item.base64 }),
+                                //Product details
+                                $("<div>").addClass("card-body p-4").append(
+                                    $("<div>").addClass("text-center").append(
+                                        $("<h5>").addClass("fw-bolder").text(item.Nombre),
+                                        "S/. " + item.Precio.toFixed(2) // Aquí se asegura de mostrar ambos decimales en el precio
+                                    )
+                                ),
+                                //Product actions
+                                $("<div>").addClass("card-footer p-4 pt-0 border-top-0 bg-transparent").append(
+                                    $("<div>").addClass("d-grid d-md-grid gap-2 d-md-block align-items-center text-center").append(
+                                        $("<button>").addClass("btn btn-outline-dark  btn-detalle").text("Ver Detalle").attr({ "data-elemento": JSON.stringify(item) }),
+                                       @{
+                                           if (((Inventario.Models.Usuario)Session["Usuario"]).EsAdministrador == false) {
+                                                @:$("<button>").addClass("btn btn-outline-dark btn-agregar-carrito").data("idproducto", item.IdProducto).text("Agregar al carrito")
+                                           }
+                                       }
+
+                                    )
+                                )
+                            )
+
+                        ).appendTo("#catalogo-productos");
+                    });
+                }
+            },
+            error: function (error) {
+                console.log(error)
+            },
+            beforeSend: function () {
+                $("#catalogo-productos").LoadingOverlay("show");
+            },
+        });
+    }
+
+        </script>
+
+
+    </body>
+</html>
+
+}

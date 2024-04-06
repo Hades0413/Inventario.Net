@@ -1,0 +1,300 @@
+﻿@model Inventario.Models.Producto
+@{
+    ViewBag.Title = "Producto";
+    Layout = "~/Views/Shared/_Layout_Tienda.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gaaaa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://kit.fontawesome.com/4dd764bfea.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #111;
+        }
+
+        :root {
+            --yellow: #f9ca24;
+        }
+
+        /* custom scroll bar */
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #212529;
+        }
+
+        /* FOOTER */
+        .contenedor-footer {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .fila {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+            margin-left: -30px;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #24262b;
+            padding: 70px 0;
+        }
+
+        .columnas {
+            width: 20%;
+            padding: 0 15px;
+            margin: 1.5%;
+        }
+
+            .columnas h4 {
+                font-size: 18px;
+                color: #ffffff;
+                text-transform: capitalize;
+                margin-bottom: 35px;
+                font-weight: 500;
+                position: relative;
+            }
+
+                .columnas h4::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -10px;
+                    background-color: cyan;
+                    height: 2px;
+                    box-sizing: border-box;
+                    width: 50px;
+                }
+
+            .columnas ul li:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            .columnas ul li a {
+                font-size: 16px;
+                text-transform: capitalize;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 300;
+                color: #bbbbbb;
+                display: block;
+                transition: all 0.3s ease;
+            }
+
+                .columnas ul li a:hover {
+                    color: #ffffff;
+                    padding-left: 8px;
+                }
+
+            .columnas .redes a {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background-color: rgba(255, 255, 255, 0.2);
+                margin: 0 10px 10px 0;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 50%;
+                color: #ffffff;
+                transition: all 0.5s ease;
+            }
+
+                .columnas .redes a:hover {
+                    color: #24262b;
+                    background-color: #ffffff;
+                }
+
+
+        /* FOOTER */
+        /* MODAL */
+        /*dropdown-menu*/
+        .dropdown-menu {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .dropdown-item {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+            .dropdown-item:hover {
+                background: #000;
+                color: #fff;
+            }
+    </style>
+
+
+    <style>
+        /**/
+        .row {
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+
+        .container-fluid {
+            width: 100%;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        /**/
+        .accordion-button {
+            cursor: pointer !important;
+        }
+
+        .accordion-body {
+            background: #1a1a1a;
+        }
+
+        .accordion-button {
+            background: #333;
+            color: #fff;
+        }
+
+        .accordion-item:first-of-type .accordion-button {
+            background: #333;
+            color: #fff;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: #333;
+        }
+
+        .d-flex {
+            color: #fff;
+        }
+
+        .accordion-item:not(:first-of-type) {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            color: #fff;
+        }
+        .small{
+            color: #fff;
+        }
+        .fw-bolder{
+            color: #fff;
+        }
+        .fs-5 {
+            color: #fff;
+        }
+        .lead {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="data:image/@Html.DisplayTextFor(model => model.extension);base64,@Html.DisplayTextFor(model => model.base64)" alt="..."></div>
+                <div class="col-md-6">
+                    <div class="small mb-1">@Html.DisplayTextFor(model => model.oMarca.Descripcion)</div>
+                    <h1 class="display-5 fw-bolder">@Html.DisplayTextFor(model => model.Nombre)</h1>
+                    <div class="fs-5 mb-5">
+                        <span>S/. @Html.DisplayTextFor(model => model.Precio)</span>
+                    </div>
+                    <p class="lead">@Html.DisplayTextFor(model => model.Descripcion)</p>
+                    <div class="d-flex">
+                        <a href="@Url.Action("Index", "Tienda")" class="btn btn-danger w-50 text-center me-3">
+                            <i class="fas fa-undo-alt"></i> Volver
+                        </a>
+                        @{
+                            if (((Inventario.Models.Usuario)Session["Usuario"]).EsAdministrador == false)
+                            {
+                                <button class="btn btn-success btn-agregar-carrito flex-shrink-0 w-50 " type="button" data-idproducto="@Html.DisplayTextFor(model => model.IdProducto)">
+                                    <i class="fas fa-cart-plus"></i> Agregar al carrito
+                                </button>
+                            }
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="contenedor-footer">
+            <div class="fila">
+                <div class="columnas">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">Conócenos</a></li>
+                        <li><a href="#">Consultas</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="columnas">
+                    <h4>FAQ</h4>
+                    <ul>
+                        <li><a href="#">¿Quiénes somos?</a></li>
+                        <li><a href="#">¿Cómo nos comunican?</a></li>
+                        <li><a href="#">¿Dónde nos encuentran?</a></li>
+                        <li><a href="#">Método de pago</a></li>
+                    </ul>
+                </div>
+                <div class="columnas">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="columnas">
+                    <h4>Síguenos</h4>
+                    <div class="redes">
+                        <a href="#"><i title="Facebook" class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i title="Twitter" class="fab fa-twitter"></i></a>
+                        <a href="#"><i title="Instagram" class="fab fa-instagram"></i></a>
+                        <a href="#"><i title="Git Hub" class="fab fa-github"></i></a>
+                        <a href="#"><i title="Youtube" class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER -->
+</body>
+</html>
+@section scripts{
+
+
+}
