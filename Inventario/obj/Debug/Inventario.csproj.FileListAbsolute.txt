@@ -81,3 +81,139 @@ C:\Users\migve\OneDrive\Escritorio\Repositorios\Inventario.Net\Inventario\obj\De
 C:\Users\migve\OneDrive\Escritorio\Repositorios\Inventario.Net\Inventario\obj\Debug\Inventario.csproj.Up2Date
 C:\Users\migve\OneDrive\Escritorio\Repositorios\Inventario.Net\Inventario\obj\Debug\Inventario.dll
 C:\Users\migve\OneDrive\Escritorio\Repositorios\Inventario.Net\Inventario\obj\Debug\Inventario.pdb
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\Inventario.dll.config
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\Inventario.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\Inventario.pdb
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\csc.exe
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\csc.exe.config
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\csc.rsp
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\csi.exe
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\csi.exe.config
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\csi.rsp
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\System.Buffers.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\System.Memory.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\vbc.exe
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\vbc.exe.config
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\vbc.rsp
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\VBCSCompiler.exe
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\Antlr3.Runtime.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\Newtonsoft.Json.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.Helpers.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.Mvc.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.Optimization.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.Razor.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.WebPages.Deployment.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.WebPages.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.WebPages.Razor.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\WebGrease.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\Newtonsoft.Json.xml
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.Helpers.xml
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.Mvc.xml
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.Razor.xml
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.WebPages.xml
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.WebPages.Deployment.xml
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.WebPages.Razor.xml
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\System.Web.Optimization.xml
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\Antlr3.Runtime.pdb
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\es\System.Web.Helpers.resources.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\es\System.Web.Mvc.resources.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\es\System.Web.Razor.resources.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\es\System.Web.WebPages.resources.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\bin\es\System.Web.Optimization.resources.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\obj\Debug\Inventario.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\obj\Debug\Inventario.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\obj\Debug\Inventario.csproj.Up2Date
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\obj\Debug\Inventario.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Inventario\obj\Debug\Inventario.pdb
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\Inventario.dll.config
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\Inventario.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\Inventario.pdb
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\csc.exe
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\csc.exe.config
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\csc.rsp
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\csi.exe
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\csi.exe.config
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\csi.rsp
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\System.Buffers.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\System.Memory.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\vbc.exe
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\vbc.exe.config
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\vbc.rsp
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\VBCSCompiler.exe
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\Antlr3.Runtime.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\Newtonsoft.Json.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.Helpers.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.Mvc.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.Optimization.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.Razor.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.WebPages.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.WebPages.Razor.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\WebGrease.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\Newtonsoft.Json.xml
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.Helpers.xml
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.Mvc.xml
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.Razor.xml
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.WebPages.xml
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.WebPages.Razor.xml
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\System.Web.Optimization.xml
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\Antlr3.Runtime.pdb
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\es\System.Web.Helpers.resources.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\es\System.Web.Mvc.resources.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\es\System.Web.Razor.resources.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\es\System.Web.WebPages.resources.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\bin\es\System.Web.Optimization.resources.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\obj\Debug\Inventario.csproj.AssemblyReference.cache
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\obj\Debug\Inventario.csproj.CoreCompileInputs.cache
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\obj\Debug\Inventario.csproj.Up2Date
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\obj\Debug\Inventario.dll
+C:\Users\HADES\Desktop\Inventario.Net\Inventario\obj\Debug\Inventario.pdb

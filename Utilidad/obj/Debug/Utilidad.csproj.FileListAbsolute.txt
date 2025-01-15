@@ -4,3 +4,15 @@ C:\Users\migve\OneDrive\Escritorio\Repositorios\Inventario.Net\Utilidad\obj\Debu
 C:\Users\migve\OneDrive\Escritorio\Repositorios\Inventario.Net\Utilidad\obj\Debug\Utilidad.csproj.CoreCompileInputs.cache
 C:\Users\migve\OneDrive\Escritorio\Repositorios\Inventario.Net\Utilidad\obj\Debug\Utilidad.dll
 C:\Users\migve\OneDrive\Escritorio\Repositorios\Inventario.Net\Utilidad\obj\Debug\Utilidad.pdb
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Utilidad\bin\Debug\Utilidad.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Utilidad\bin\Debug\Utilidad.pdb
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Utilidad\obj\Debug\Utilidad.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Utilidad\obj\Debug\Utilidad.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Utilidad\obj\Debug\Utilidad.dll
+C:\Users\USER\Desktop\Ecommerce - .Net\Inventario.Net\Utilidad\obj\Debug\Utilidad.pdb
+C:\Users\HADES\Desktop\Inventario.Net\Utilidad\bin\Debug\Utilidad.dll
+C:\Users\HADES\Desktop\Inventario.Net\Utilidad\bin\Debug\Utilidad.pdb
+C:\Users\HADES\Desktop\Inventario.Net\Utilidad\obj\Debug\Utilidad.csproj.AssemblyReference.cache
+C:\Users\HADES\Desktop\Inventario.Net\Utilidad\obj\Debug\Utilidad.csproj.CoreCompileInputs.cache
+C:\Users\HADES\Desktop\Inventario.Net\Utilidad\obj\Debug\Utilidad.dll
+C:\Users\HADES\Desktop\Inventario.Net\Utilidad\obj\Debug\Utilidad.pdb

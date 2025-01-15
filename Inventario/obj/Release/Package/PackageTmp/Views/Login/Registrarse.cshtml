@@ -1,4 +1,4 @@
-﻿@model ProyectoTest.Models.Usuario
+﻿@model Inventario.Models.Usuario
 @{
     Layout = null;
 }
@@ -18,7 +18,7 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
-    <title>Document</title>
+    <title>Registro</title>
 
 
     <style>
@@ -196,6 +196,13 @@
             .new .acc {
                 font-size: 14px;
             }
+        a {
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline #fff;
+            }
 
         .acc span {
             color: #fff;
@@ -236,19 +243,19 @@
 
         <div class="input-container">
             <div class="inputBox">
-                <input type="text" id="inputFirstName" name="NNombres" placeholder="Nombres" value="@Html.DisplayTextFor(model => model.Nombres)" />
+                <input type="text" id="inputFirstName" name="NNombres" placeholder="Nombres" value="@Html.DisplayTextFor(model => model.Nombres)" required />
             </div>
             <div class="inputBox">
-                <input type="text" id="inputLastName" name="NApellidos" placeholder="Apellidos" value="@Html.DisplayTextFor(model => model.Apellidos)" />
+                <input type="text" id="inputLastName" name="NApellidos" placeholder="Apellidos" value="@Html.DisplayTextFor(model => model.Apellidos)" required />
             </div>
             <div class="inputBox">
-                <input type="text" id="inputEmail" name="NCorreo" placeholder="Correo" value="@Html.DisplayTextFor(model => model.Correo)" />
+                <input type="text" id="inputEmail" name="NCorreo" placeholder="Correo" value="@Html.DisplayTextFor(model => model.Correo)" required />
             </div>
             <div class="inputBox">
-                <input type="Password" id="inputPassword" name="NContrasena" placeholder="Contraseña" value="@Html.DisplayTextFor(model => model.Contrasena)" />
+                <input type="Password" id="inputPassword" name="NContrasena" placeholder="Contraseña" value="@Html.DisplayTextFor(model => model.Contrasena)" required />
             </div>
             <div class="inputBox">
-                <input type="Password" id="inputPasswordConfirm" name="NConfirmarContrasena" placeholder="Confirma Contraseña" value="@Html.DisplayTextFor(model => model.ConfirmarContrasena)" />
+                <input type="Password" id="inputPasswordConfirm" name="NConfirmarContrasena" placeholder="Confirma Contraseña" value="@Html.DisplayTextFor(model => model.ConfirmarContrasena)" required />
             </div>
         </div>
 
@@ -278,13 +285,15 @@
     @if (ViewBag.Error != null)
     {
         <script>
-Swal.fire({
-    title: "Oops!",
-    text: "@Html.Raw(ViewBag.Error)",
-    icon: "error"
-});
+        Swal.fire({
+            title: "Oops!",
+            text: "@Html.Raw(ViewBag.Error)",
+            icon: "error"
+        });
         </script>
     }
+
+
 </body>
 </html>
 

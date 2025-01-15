@@ -353,61 +353,56 @@
 
 
         $(document).ready(function () {
-            jQuery.ajax({
-                url: '@Url.Action("ObtenerCarrito", "Tienda")',
-                type: "GET",
-                data: null,
-                dataType: "json",
-                contentType: "application/json; charset=utf-8",
-                success: function (data) {
-                    $.LoadingOverlay("hide");
-                    if (data.lista != null) {
-                        $.each(data.lista, function (i, item) {
-                            $("<div>").addClass("card mb-2 card-producto").append(
-
-                                $("<div>").addClass("card-body").append(
-
-                                    $("<div>").addClass("row").append(
-                                        $("<div>").addClass("col-1").append(
-                                            $("<img>").addClass("rounded").attr({ "src": "data:image/" + item.oProducto.extension + ";base64," + item.oProducto.base64, "width": "50" })
-                                        ),
-                                        $("<div>").addClass("col-7").append(
-                                            $("<div>").addClass("ml-2").append(
-                                                $("<span>").addClass("font-weight-bold d-block").text(item.oProducto.oMarca.Descripcion),
-                                                $("<span>").addClass("spec").text(item.oProducto.Nombre),
-                                                $("<span>").addClass("float-end").text("Precio : S./" + item.oProducto.Precio )
-                                            )
-                                        ),
-                                        $("<div>").addClass("col-3").append(
-                                            $("<div>").addClass("d-flex justify-content-end controles").append(
-                                                $("<button>").addClass("btn btn-outline-secondary btn-restar rounded-0").append($("<i>").addClass("fas fa-minus")).attr({ "type": "button" }),
-                                                $("<input>").addClass("form-control input-cantidad p-1 text-center rounded-0").css({ "width": "40px" }).attr({ "disabled": "disabled" }).val("1").data("precio", item.oProducto.Precio).data("idproducto", item.oProducto.IdProducto),
-                                                $("<button>").addClass("btn btn-outline-secondary btn-sumar rounded-0").append($("<i>").addClass("fas fa-plus")).attr({ "type": "button" })
-                                            )
-                                        ),
-                                        $("<div>").addClass("col-1").append(
-                                            $("<button>").addClass("btn btn-outline-danger btn-eliminar").append($("<i>").addClass("far fa-trash-alt")).data("informacion", { _IdCarrito: item.IdCarrito, _IdProducto: item.oProducto.IdProducto}),
-                                        )
+    jQuery.ajax({
+        url: '@Url.Action("ObtenerCarrito", "Tienda")',
+        type: "GET",
+        data: null,
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function (data) {
+            $.LoadingOverlay("hide");
+            if (data.lista != null) {
+                $.each(data.lista, function (i, item) {
+                    $("<div>").addClass("card mb-2 card-producto").append(
+                        $("<div>").addClass("card-body").append(
+                            $("<div>").addClass("row").append(
+                                $("<div>").addClass("col-1").append(
+                                    $("<img>").addClass("rounded").attr({ "src": "data:image/" + item.oProducto.extension + ";base64," + item.oProducto.base64, "width": "50" })
+                                ),
+                                $("<div>").addClass("col-7").append(
+                                    $("<div>").addClass("ml-2").append(
+                                        $("<span>").addClass("font-weight-bold d-block").text(item.oProducto.oMarca.Descripcion),
+                                        $("<span>").addClass("spec").text(item.oProducto.Nombre),
+                                        $("<span>").addClass("float-end").text("Precio : S./" + item.oProducto.Precio.toFixed(2)) // Aquí se asegura de mostrar ambos decimales en el precio
                                     )
+                                ),
+                                $("<div>").addClass("col-3").append(
+                                    $("<div>").addClass("d-flex justify-content-end controles").append(
+                                        $("<button>").addClass("btn btn-outline-secondary btn-restar rounded-0").append($("<i>").addClass("fas fa-minus")).attr({ "type": "button" }),
+                                        $("<input>").addClass("form-control input-cantidad p-1 text-center rounded-0").css({ "width": "40px" }).attr({ "disabled": "disabled" }).val("1").data("precio", item.oProducto.Precio).data("idproducto", item.oProducto.IdProducto),
+                                        $("<button>").addClass("btn btn-outline-secondary btn-sumar rounded-0").append($("<i>").addClass("fas fa-plus")).attr({ "type": "button" })
+                                    )
+                                ),
+                                $("<div>").addClass("col-1").append(
+                                    $("<button>").addClass("btn btn-outline-danger btn-eliminar").append($("<i>").addClass("far fa-trash-alt")).data("informacion", { _IdCarrito: item.IdCarrito, _IdProducto: item.oProducto.IdProducto }),
                                 )
-                            ).appendTo("#productos-seleccionados");
-
-
-                        })
-
-                        obtenerPreciosPago();
-                        obtenerCantidadProductos();
-                    }
-                },
-                error: function (error) {
-                    console.log(error)
-                },
-                beforeSend: function () {
-                    $.LoadingOverlay("show");
-                },
-            });
-            ListarDepartamento();
-        })
+                            )
+                        )
+                    ).appendTo("#productos-seleccionados");
+                })
+                obtenerPreciosPago();
+                obtenerCantidadProductos();
+            }
+        },
+        error: function (error) {
+            console.log(error)
+        },
+        beforeSend: function () {
+            $.LoadingOverlay("show");
+        },
+    });
+    ListarDepartamento();
+})
 
 
         $(document).on('click', '.btn-sumar', function (event) {
@@ -461,15 +456,19 @@
         })
 
 
-        function obtenerPreciosPago() {
+            function obtenerPreciosPago() {
+                var total = 0;
+                $("input.input-cantidad").each(function (index) {
+                    var precio = parseFloat($(this).val()) * parseFloat($(this).data("precio"));
+                    total = total + precio;
+                });
 
-            var total = 0;
-            $("input.input-cantidad").each(function (index) {
-                var precio = parseFloat($(this).val()) * parseFloat($(this).data("precio"));
-                total = total + precio;
-            });
-            $("#totalPagar").text("S/. " + total.toString());
-        }
+                // Redondear el total a dos decimales
+                total = total.toFixed(2);
+
+                $("#totalPagar").text("S/. " + total.toString());
+            }
+
         function obtenerCantidadProductos() {
             $("#cantidad-articulos").text(" " + $("#productos-seleccionados > div.card").length.toString() + " ");
 
@@ -665,6 +664,49 @@
 
 
         </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Validación para el Nombre del Titular (Solo letras y espacios)
+                var inputNombre = document.getElementById('trj_nombre');
+                inputNombre.addEventListener('input', function () {
+                    this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+                });
+
+                // Validación para el Número de Tarjeta (Formato XXXX XXXX XXXX XXXX)
+                var inputNumeroTarjeta = document.getElementById('trj_numero');
+                inputNumeroTarjeta.addEventListener('input', function () {
+                    this.value = this.value.replace(/\D/g, ''); // Elimina caracteres no numéricos
+                    this.value = this.value.replace(/(\d{4})(?=\d)/g, '$1 '); // Agrega espacios cada 4 dígitos
+                    if (this.value.length > 19) {
+                        this.value = this.value.slice(0, 19); // Limita la longitud a 19 caracteres
+                    }
+                });
+
+                // Validación para la Vigencia (Formato "MM/YY")
+                var inputVigencia = document.getElementById('trj_vigencia');
+                inputVigencia.addEventListener('input', function () {
+                    this.value = this.value.replace(/\D/g, ''); // Elimina caracteres no numéricos
+                    if (this.value.length > 2) {
+                        this.value = this.value.slice(0, 2) + '/' + this.value.slice(2, 4); // Limita la vigencia a dos dígitos después del "/"
+                    }
+                    if (this.value.length > 5) {
+                        this.value = this.value.slice(0, 5); // Limita la longitud total a 5 caracteres (MM/YY)
+                    }
+                });
+
+                // Validación para el CVV (Solo números, máximo 3 caracteres)
+                var inputCVV = document.getElementById('trj_cvv');
+                inputCVV.addEventListener('input', function () {
+                    this.value = this.value.replace(/\D/g, '');
+                    if (this.value.length > 3) {
+                        this.value = this.value.slice(0, 3);
+                    }
+                });
+            });
+        </script>
+
+
 
 
     </body>

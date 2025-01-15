@@ -17,7 +17,7 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
-    <title>Document</title>
+    <title>Login</title>
 
     <style>
        :root {
@@ -194,6 +194,10 @@
             .new .acc {
                 font-size: 14px;
             }
+        a {
+            text-decoration: none;
+        }
+        a:hover{text-decoration:underline #fff;}
 
         .acc span {
             color: #fff;
@@ -237,7 +241,7 @@
                 <input class="form-control" id="inputEmail" name="NCorreo" type="email" placeholder="Correo" value="admin@example.com" />
             </div>
             <div class="inputBox">
-                <input class="form-control" id="inputPassword" name="NContrasena" type="password" placeholder="Contraseña" autocomplete="off" value="admin1234" />
+                <input class="form-control" id="inputPassword" name="NContrasena" type="password" placeholder="Contraseña" autocomplete="off" value="admin123" />
             </div>
         </div>
 
@@ -263,31 +267,35 @@
     @Scripts.Render("~/bundles/bootstrap")
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
- function submitForm() {
-     Swal.fire({
-         title: "Bienvenido",
-         text: "¡Inicio de sesión exitoso!",
-         icon: "success"
-     });
+    function submitForm() {
+        // Deshabilita el botón de enviar
+        $("#submitBtn").prop("disabled", true);
 
-     $("#submitBtn").prop("disabled", true);
+        // Muestra la alerta de inicio de sesión exitoso
+        Swal.fire({
+            title: "Bienvenido",
+            text: "¡Inicio de sesión exitoso!",
+            icon: "success"
+        });
 
-     setTimeout(function () {
-         $("#submitBtn").prop("disabled", false);
-         $("#loginForm").submit();
-     }, 2000);
- }
+        // Espera 2 segundos antes de enviar el formulario
+        setTimeout(function () {
+            $("#loginForm").submit();
+        }, 2000);
+    }
 
- @if (ViewBag.Error != null)
- {
-     <text>
-         Swal.fire({
-             title: "Oops!",
-             text: "@Html.Raw(ViewBag.Error)",
-             icon: "error"
-         });
-     </text>
- }
+    // Muestra la alerta de error si existe
+    @if (ViewBag.Error != null)
+    {
+        <text>
+            Swal.fire({
+                title: "Oops!",
+                text: "@Html.Raw(ViewBag.Error)",
+                icon: "error"
+            });
+        </text>
+    }
     </script>
+
 </body>
 </html>
